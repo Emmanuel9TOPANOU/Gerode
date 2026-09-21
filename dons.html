@@ -119,192 +119,187 @@
     </div>
   </header>
 
-  <section class="relative w-full min-h-[600px] flex flex-col lg:flex-row overflow-hidden">
 
-    <div class="w-full lg:w-1/2 bg-[#34A7DE] flex items-center justify-center p-8 lg:p-20 order-2 lg:order-1"
-      data-aos="fade-right" data-aos-duration="1000">
-      <div class="max-w-xl">
-        <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-6" data-aos="fade-up"
-          data-aos-delay="200">
-          Agir aujourd’hui pour protéger et éduquer l’enfant de demain..
-        </h1>
-
-        <p class="text-white text-lg md:text-xl font-light mb-10 opacity-90" data-aos="fade-up" data-aos-delay="400">
-          Promotion des droits et devoirs de l’enfant, initiation à l’informatique et actions solidaires pour un avenir
-          plus juste et inclusif.
-        </p>
-
-        <div data-aos="zoom-in" data-aos-delay="600">
-          <a href="dons.html" class="inline-block bg-white text-[#34A7DE] px-10 py-4 rounded-lg font-bold text-xl shadow-lg 
-                  hover:bg-gray-50 hover:shadow-2xl hover:-translate-y-2 hover:scale-105
-                  active:scale-95 transition-all duration-300 ease-out uppercase tracking-wide">
-            Faire un don
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="w-full lg:w-1/2 h-64 md:h-[500px] lg:h-auto order-1 lg:order-2 overflow-hidden" data-aos="fade-left"
+  <section class="w-full bg-[#34A7DE] py-24 md:py-32 flex items-center justify-center">
+    <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-black  drop-shadow-lg" data-aos="zoom-in"
       data-aos-duration="1000">
-      <div
-        class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110 cursor-pointer"
-        style="background-image: url('src/assets/images/img1.jpg');">
-        <div class="w-full h-full bg-blue-900/10 hover:bg-transparent transition-colors duration-500"></div>
-      </div>
-    </div>
-
+      Faites un don pour soutenir notre mission
+    </h3>
   </section>
 
 
-  <section class="py-24 bg-white font-['Poppins'] overflow-hidden">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="flex flex-col lg:flex-row items-center gap-16">
+  <section class="py-10 md:py-24 bg-[#F8FAFB]">
+    <div class="max-w-4xl mx-auto px-4 md:px-6">
+      <div class="bg-white shadow-2xl shadow-gray-200/60 rounded-[2rem] border border-gray-100 overflow-visible mb-10">
 
-        <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
-          <div class="absolute -top-10 -left-10 w-64 h-64 bg-[#34A7DE]/5 rounded-full blur-3xl"></div>
+        <div class="p-6 md:p-12">
+          <h2 class="text-xl md:text-2xl font-bold text-[#0D6085] text-center mb-8 leading-snug">
+            Faites un don pour nous soutenir dans notre mission
+          </h2>
 
-          <div class="relative z-10">
-            <img src="src/assets/images/img2.jpg" alt="Enfants GEROD"
-              class="rounded-3xl shadow-2xl w-full h-[450px] object-cover transition-transform duration-500 hover:scale-[1.02]">
+          <form id="donationForm" class="space-y-6 md:space-y-8 flex flex-col" style="min-height: 500px;"
+            onsubmit="return false;">
 
-            <div class="absolute -bottom-6 -right-6 bg-[#34A7DE] p-6 rounded-2xl shadow-xl hidden md:block"
-              data-aos="zoom-in" data-aos-delay="500">
-              <p class="text-white text-sm font-bold uppercase tracking-widest italic">"Ensemble pour un monde nouveau"
-              </p>
+            <div class="bg-[#EBF7FC] p-5 md:p-8 rounded-[1.5rem] space-y-4">
+              <p class="font-bold text-lg text-black mb-4">Informations personnelles</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-2">
+                  <label for="donorNom" class="font-bold text-black text-sm">Nom</label>
+                  <input type="text" id="donorNom" required placeholder="DOLET"
+                    class="w-full px-4 py-3.5 rounded-xl border-2 border-[#81D4FA] bg-white focus:border-[#0D6085] outline-none transition-all text-sm text-gray-700 placeholder-gray-300">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="donorPrenom" class="font-bold text-black text-sm">Prénom</label>
+                  <input type="text" id="donorPrenom" required placeholder="Jacques"
+                    class="w-full px-4 py-3.5 rounded-xl border-2 border-[#81D4FA] bg-white focus:border-[#0D6085] outline-none transition-all text-sm text-gray-700 placeholder-gray-300">
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <label for="donorEmail" class="font-bold text-black text-sm">Email</label>
+                <input type="email" id="donorEmail" required placeholder="jacquesdolet@gmail.com"
+                  class="w-full px-4 py-3.5 rounded-xl border-2 border-[#81D4FA] bg-white focus:border-[#0D6085] outline-none transition-all text-sm text-gray-700 placeholder-gray-300">
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="w-full lg:w-1/2">
-          <header class="mb-8">
-            <h2 class="text-[#34A7DE] text-3xl md:text-4xl font-bold leading-tight mb-6" data-aos="fade-left">
-              Qu’est ce que <br>l’ONG GEROD ?
-            </h2>
-            <div class="w-20 h-1.5 bg-[#34A7DE] rounded-full" data-aos="fade-left" data-aos-delay="200"></div>
-          </header>
+            <div class="bg-[#EBF7FC] p-5 md:p-8 rounded-[1.5rem] space-y-6">
+              <p class="font-bold text-lg text-black">Moyens de payement</p>
 
-          <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p data-aos="fade-left" data-aos-delay="300">
-              L’ONG GEROD œuvre pour la protection et l’épanouissement des enfants, en particulier ceux issus de milieux
-              vulnérables. Elle sensibilise aux droits et devoirs de l’enfant tout en transmettant des valeurs de
-              <strong>respect, de responsabilité et de citoyenneté.</strong>
-            </p>
+              <div class="flex bg-gray-200/70 p-1 rounded-xl gap-1">
+                <button type="button" id="btnMobile" onclick="switchTab('mobile')"
+                  class="flex-1 flex items-center justify-center gap-2 bg-white py-2.5 rounded-lg shadow-sm font-bold text-xs md:text-sm transition-all text-black">
+                  <i class="ph ph-device-mobile text-base"></i> Mobile Money (Bénin)
+                </button>
+                <button type="button" id="btnCard" onclick="switchTab('card')"
+                  class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg font-bold text-xs md:text-sm text-gray-600 hover:text-gray-900 transition-all">
+                  <i class="ph ph-globe text-base"></i> Carte/ PayPal (International)
+                </button>
+              </div>
 
-            <p data-aos="fade-left" data-aos-delay="400">
-              À travers l’initiation à l’informatique et des actions solidaires, GEROD accompagne les enfants vers la
-              réussite, soutient les plus démunis et récompense les élèves méritants afin de construire un avenir
-              meilleur et équitable pour tous.
-            </p>
-          </div>
+              <div id="viewMobile" class="space-y-6 animate-fade-in">
+                <div class="grid grid-cols-3 gap-3">
+                  <div onclick="selectOperator(this, 'MTN')"
+                    class="operator-card border-2 border-[#81D4FA] bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all shadow-sm">
+                    <img src="src/assets/images/img30.png" alt="MTN MoMo" class="h-7 w-auto object-contain">
+                    <span class="text-[10px] font-bold text-black text-center">MTN MoMo</span>
+                  </div>
+                  <div onclick="selectOperator(this, 'Moov')"
+                    class="operator-card border-2 border-transparent bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all shadow-sm">
+                    <img src="src/assets/images/img24.jpg" alt="Moov Money" class="h-7 w-auto object-contain">
+                    <span class="text-[10px] font-bold text-black text-center">Moov Money</span>
+                  </div>
+                  <div onclick="selectOperator(this, 'Celtiis')"
+                    class="operator-card border-2 border-transparent bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all shadow-sm">
+                    <img src="src/assets/images/img25.png" alt="Celtiis Cash" class="h-7 w-auto object-contain">
+                    <span class="text-[10px] font-bold text-black text-center">Celtiis Cash</span>
+                  </div>
+                </div>
 
-          <div class="mt-10" data-aos="fade-up" data-aos-delay="500">
-            <a href="a-propos.html"
-              class="group inline-flex items-center font-bold text-[#34A7DE] hover:text-[#2a8bb8] transition-colors">
-              Découvrir notre histoire
-              <svg class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="flex flex-col gap-2">
+                    <label id="labelNumber" class="font-bold text-black text-sm">Numéro MTN</label>
+                    <input type="tel" placeholder="XX XX XX XX XX"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none bg-white text-sm placeholder-gray-300">
+                    <span class="text-[10px] text-gray-400 mt-1">Un message de confirmation sera envoyé sur votre
+                      téléphone</span>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label class="font-bold text-black text-sm">Montant</label>
+                    <div class="relative">
+                      <input type="number" placeholder="2000 FCFA"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none text-black bg-white text-sm font-semibold">
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-      </div>
-    </div>
-  </section>
+              <div id="viewCard" class="hidden animate-fade-in space-y-6">
+                <div class="grid grid-cols-1 gap-4">
+                  <div class="flex flex-col gap-2">
+                    <label class="font-bold text-black text-sm">Numéro de carte</label>
+                    <input type="text" placeholder="xxxx xxxx xxxx xxxx"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none text-sm bg-white">
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-2">
+                      <label class="font-bold text-black text-sm">Expiration</label>
+                      <input type="text" placeholder="MM / AA"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none text-sm text-center bg-white">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label class="font-bold text-black text-sm">CVV</label>
+                      <input type="password" placeholder="***"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none text-sm text-center bg-white">
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  <section class="py-24 bg-gray-50 font-['Poppins'] overflow-hidden">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-
-        <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
-          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#34A7DE]/10 rounded-full blur-2xl"></div>
-
-          <div class="relative z-10  overflow-hidden  group">
-            <img src="src/assets/images/img4.png" alt="Engagement GEROD"
-              class="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-110">
-
-            <div
-              class="absolute inset-0 bg-[#34A7DE]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div class="pt-4">
+                <button type="submit"
+                  class="w-full bg-[#1E88E5] hover:bg-[#1565C0] text-white font-bold py-4 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center text-base">
+                  Valider la transaction
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
+
         </div>
-
-        <div class="w-full lg:w-1/2">
-          <div class="mb-8">
-            <h2 class="text-[#34A7DE] text-3xl md:text-4xl font-bold leading-tight mb-6" data-aos="fade-up">
-              Notre engagement <br>pour l’avenir
-            </h2>
-            <div class="w-24 h-1.5 bg-[#34A7DE] rounded-full" data-aos="fade-up" data-aos-delay="200"></div>
-          </div>
-
-          <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p data-aos="fade-up" data-aos-delay="300">
-              L’ONG GEROD s’engage à protéger et promouvoir les droits et devoirs de l’enfant, à renforcer son éducation
-              et à favoriser son épanouissement à travers l’initiation à l’informatique et des actions solidaires.
-            </p>
-
-            <p class="bg-white p-6 rounded-2xl shadow-sm border-l-8 border-[#34A7DE]" data-aos="fade-up"
-              data-aos-delay="400">
-              Sa vision est de bâtir une société plus juste où chaque enfant, quel que soit son milieu, dispose des
-              connaissances, des compétences et du soutien nécessaires pour réussir et construire son avenir.
-            </p>
-          </div>
-
-          <div class="mt-12" data-aos="zoom-in" data-aos-delay="500">
-            <a href="contact.html" class="inline-flex items-center bg-[#34A7DE] text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg 
-                    hover:bg-[#2a8bb8] hover:shadow-blue-200 hover:-translate-y-1 transition-all duration-300">
-              Nous contacter
-              <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <section class="relative py-24 md:py-24 flex items-center justify-center font-['Nunito'] overflow-hidden">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
 
-    <div class="absolute inset-0 z-0">
-      <img src="src/assets/images/img6.jpg" alt="Fond Nuages" class="w-full h-full object-cover">
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60"></div>
-    </div>
+    .animate-fade-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+  </style>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+  <script>
+    function switchTab(type) {
+      const btnMobile = document.getElementById('btnMobile');
+      const btnCard = document.getElementById('btnCard');
+      const viewMobile = document.getElementById('viewMobile');
+      const viewCard = document.getElementById('viewCard');
 
-      <h2 class="text-white text-3xl md:text-5xl lg:text-4xl font-black mb-16 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]"
-        data-aos="zoom-out" data-aos-duration="1000">
-        VOTRE SOUTIEN PEUT TOUT CHANGER
-      </h2>
+      const activeClasses = "flex-1 flex items-center justify-center gap-2 bg-white py-2.5 rounded-lg shadow-sm font-bold text-xs md:text-sm transition-all text-black";
+      const inactiveClasses = "flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg font-bold text-xs md:text-sm text-gray-600 hover:text-gray-900 transition-all";
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-8" data-aos="fade-up" data-aos-delay="300">
+      if (type === 'mobile') {
+        btnMobile.className = activeClasses;
+        btnCard.className = inactiveClasses;
+        viewMobile.classList.remove('hidden');
+        viewCard.classList.add('hidden');
+      } else {
+        btnCard.className = activeClasses;
+        btnMobile.className = inactiveClasses;
+        viewCard.classList.remove('hidden');
+        viewMobile.classList.add('hidden');
+      }
+    }
 
-        <a href="dons.html"
-          class="group relative w-full sm:w-72 bg-white text-[#34A7DE] py-5 rounded-xl font-black text-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-white/20 transition-all duration-300 hover:-translate-y-2 flex items-center justify-center overflow-hidden">
-          <span class="relative z-10">Faire un don</span>
-          <div
-            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
-          </div>
-        </a>
-
-        <a href="contact.html"
-          class="group w-full sm:w-72 bg-transparent border-2 border-white text-white py-5 rounded-xl font-black text-2xl shadow-lg backdrop-blur-sm hover:bg-white hover:text-[#34A7DE] transition-all duration-300 hover:-translate-y-2 flex items-center justify-center">
-          Nous contacter
-        </a>
-
-      </div>
-    </div>
-  </section>
-
+    function selectOperator(element, name) {
+      document.querySelectorAll('.operator-card').forEach(card => {
+        card.className = "operator-card border-2 border-transparent bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all shadow-sm";
+      });
+      element.className = "operator-card border-2 border-[#81D4FA] bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all shadow-sm";
+      document.getElementById('labelNumber').innerText = 'Numéro ' + name;
+    }
+  </script>
 
 
 

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEROD</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="src/assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@latest/dist/css/phosphor.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+
+<body>
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 font-['Poppins']" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <a href="index.html" class="z-50">
+                    <div class="flex-shrink-0">
+                        <img class="h-10 w-auto" src="src/assets/images/logo.png" alt="Logo GEROD">
+                    </div>
+                </a>
+
+                <nav id="main-nav" class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link text-gray-600 hover:text-[#34A7DE] transition-colors font-medium pt-2">Accueil</a>
+                    <a href="a-propos.html"
+                        class="nav-link text-gray-600 hover:text-[#34A7DE] transition-colors font-medium pt-2">A
+                        propos</a>
+                    <a href="nos-programmes.html"
+                        class="nav-link text-gray-600 hover:text-[#34A7DE] transition-colors font-medium pt-2">Nos
+                        programmes</a>
+                    <a href="realisations.html"
+                        class="nav-link text-gray-600 hover:text-[#34A7DE] transition-colors font-medium pt-2">Réalisations</a>
+                    <a href="actualites-blog.html"
+                        class="nav-link text-gray-600 hover:text-[#34A7DE] transition-colors font-medium pt-2">Actualités
+                        & Blog</a>
+                    <a href="contact.html"
+                        class="nav-link text-gray-600 hover:text-[#34A7DE] transition-colors font-medium pt-2">Contact</a>
+                </nav>
+
+
+                      <div class="hidden lg:block">
+          <a href="dons.html"
+            class="bg-[#34A7DE] hover:bg-[#2a8bb8] text-white px-7 py-3 rounded-md font-bold text-base uppercase tracking-wider transition-all shadow-lg hover:shadow-2xl inline-block animate-pulse hover:animate-none transform hover:scale-110 transition duration-300">
+            Faire un don
+          </a>
+        </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button @click="mobileMenuOpen = true" class="text-gray-600 hover:text-[#34A7DE] p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:hidden">
+            <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0" @click="mobileMenuOpen = false"
+                class="fixed inset-0 bg-black/50 z-[60]">
+            </div>
+
+            <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-300 transform"
+                x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+                x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-x-0"
+                x-transition:leave-end="translate-x-full"
+                class="fixed right-0 top-0 h-full w-64 sm:w-80 bg-white z-[70] shadow-2xl p-6 overflow-y-auto">
+
+                <div class="flex justify-end mb-8">
+                    <button @click="mobileMenuOpen = false" class="text-gray-500 hover:text-[#34A7DE]">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html"
+                        class="mobile-nav-link text-lg font-medium text-gray-700 py-2 border-b border-gray-50">Accueil</a>
+                    <a href="a-propos.html"
+                        class="mobile-nav-link text-lg font-medium text-gray-700 py-2 border-b border-gray-50">A
+                        propos</a>
+                    <a href="nos-programmes.html"
+                        class="mobile-nav-link text-lg font-medium text-gray-700 py-2 border-b border-gray-50">Nos
+                        programmes</a>
+                    <a href="realisations.html"
+                        class="mobile-nav-link text-lg font-medium text-gray-700 py-2 border-b border-gray-50">Réalisations</a>
+                    <a href="actualites-blog.html"
+                        class="mobile-nav-link text-lg font-medium text-gray-700 py-2 border-b border-gray-50">Actualités
+                        & Blog</a>
+                    <a href="contact.html"
+                        class="mobile-nav-link text-lg font-medium text-gray-700 py-2 border-b border-gray-50">Contact</a>
+
+                 
+                      <div class="hidden lg:block">
+          <a href="dons.html"
+            class="bg-[#34A7DE] hover:bg-[#2a8bb8] text-white px-7 py-3 rounded-md font-bold text-base uppercase tracking-wider transition-all shadow-lg hover:shadow-2xl inline-block animate-pulse hover:animate-none transform hover:scale-110 transition duration-300">
+            Faire un don
+          </a>
+        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="w-full bg-[#34A7DE] py-24 md:py-32 flex items-center justify-center">
+        <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-black  drop-shadow-lg" data-aos="zoom-in"
+            data-aos-duration="1000">
+            Nos réalisations
+        </h3>
+    </section>
+
+    <section class="w-full py-20 px-4 md:px-8 bg-white overflow-hidden relative">
+
+        <!-- Éléments décoratifs de fond -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-[#34A7DE]/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-[#34A7DE]/5 rounded-full blur-3xl"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#34A7DE]/[0.02] rounded-full blur-3xl">
+            </div>
+        </div>
+
+
+        <div class="max-w-8xl mx-auto relative p-6">
+
+            <!-- En-tête -->
+            <div class="text-center mb-12">
+                <p class="text-slate-600 text-xl md:text-2xl mt-6 max-w-3xl mx-auto font-light leading-relaxed">
+                    Découvrez nos actions et initiatives menées pour la protection et l'éducation des enfants
+                </p>
+            </div>
+
+            <!-- Grille des projets (Passage à 3 colonnes sur grand écran pour des cartes plus petites) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+
+                <!-- Projet 1 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img15.jpg" alt="Deuxième édition du projet"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Édition 2
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            01
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Je connais mes droits et devoirs
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Actions éducatives menées auprès des enfants pour renforcer la connaissance de leurs
+                                droits et devoirs
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img16.jpg" alt="Troisième édition du projet"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Édition 3
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            02
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Je connais mes droits et devoirs
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                En partenariat avec l'Association des Femmes Avocates du Bénin
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img17.jpg" alt="Quatrième édition du projet"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Édition 4
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            03
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Je connais mes droits et devoirs
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Activités éducatives dédiées à la connaissance des droits et devoirs de l'enfant
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img18.jpg" alt="Remise d'attestation"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Certification
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            04
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Remise d'attestation en informatique
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Cérémonie de remise d'attestations pour l'année académique 2018-2019
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img14.jpg" alt="Journée récréative"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Événement
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            05
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Journée récréative de Noël
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Remise de cadeaux aux enfants en partenariat avec CS La SAINTETE
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img19.jpg" alt="Don aux orphelins"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Humanitaire
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            06
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Don aux orphelins
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Action humanitaire de soutien aux orphelins avec remise de dons essentiels
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 7 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img20.jpg" alt="Septième édition"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Édition 7
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            07
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Je connais mes droits et devoirs
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Actions éducatives menées auprès des enfants pour renforcer la connaissance de leurs
+                                droits
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Projet 8 -->
+                <div
+                    class="group flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div class="relative overflow-hidden h-48 w-full">
+                        <img src="src/assets/images/img21.jpg" alt="Appel au soutien"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3">
+                            <span
+                                class="px-2.5 py-0.5 bg-[#34A7DE]/90 backdrop-blur-sm text-white text-[11px] font-semibold rounded-full">
+                                Campagne
+                            </span>
+                        </div>
+                        <div class="absolute -right-4 -top-4 text-6xl font-extrabold text-[#34A7DE]/5 select-none">
+                            08
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-bold text-[#0B1E33] leading-snug line-clamp-2">
+                                Appel au soutien éducatif
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed font-light line-clamp-3">
+                                Campagne de mobilisation pour le renforcement de l'éducation informatique des enfants
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECTION CTA -->
+    <section class="relative w-full overflow-hidden bg-gradient-to-br from-[#34A7DE] to-[#1a7aaa] py-16 px-4 ">
+
+
+
+        <div class="relative z-10 mx-auto max-w-7xl text-center">
+
+
+
+            <h3 class="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl leading-tight">
+                Engagez-vous à nos côtés pour<br>
+                <span class="text-white/90">la protection de l'enfant</span>
+            </h3>
+
+            <p class="text-white/80 text-base mb-8 max-w-2xl mx-auto font-light">
+                Chaque geste compte. Rejoignez-nous dans notre mission pour un avenir meilleur pour les enfants.
+            </p>
+
+            <div class="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-6">
+
+                <a href="contact.html"
+                    class="group w-full max-w-[280px] rounded-xl bg-white p-5 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 md:w-auto md:max-w-none md:min-w-[260px]">
+                    <span
+                        class="flex items-center justify-center gap-2 text-xl font-bold tracking-tight text-[#34A7DE]">
+                        <i class="ph ph-handshake text-2xl"></i>
+                        Devenir partenaire
+                    </span>
+                    <span class="text-xs text-slate-500 font-light mt-1 block">Ensemble pour les enfants</span>
+                </a>
+
+                <a href="don.html"
+                    class="group w-full max-w-[280px] rounded-xl bg-white p-5 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 md:w-auto md:max-w-none md:min-w-[260px]">
+                    <span
+                        class="flex items-center justify-center gap-2 text-xl font-bold tracking-tight text-[#34A7DE]">
+                        <i class="ph ph-heart text-2xl"></i>
+                        Faire un don
+                    </span>
+                    <span class="text-xs text-slate-500 font-light mt-1 block">Soutenir notre mission</span>
+                </a>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="bg-[#34A7DE] text-white pt-16 pb-0 font-['Nunito'] w-full">
+        <div class="max-w-8xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+
+                <div class="space-y-4">
+                    <div class=" p-2  inline-block ">
+                        <img src="src/assets/images/logo.png" alt="Logo GEROD" class="h-12 w-auto">
+                    </div>
+                    <p class="text-white text-base font-bold leading-snug max-w-xs">
+                        Œuvrer pour les droits de l’enfant, l’éducation et un avenir équitable pour tous.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-black mb-4 uppercase tracking-wider">Ressources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="actualites-blog.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Actualités</a>
+                        </li>
+                        <li><a href="actualites-blog.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Projets</a>
+                        </li>
+                        <li><a href="a-propos.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Objectifs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-black mb-4 uppercase tracking-wider">Lien Rapide</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Accueil</a>
+                        </li>
+                        <li><a href="a-propos.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">A
+                                propos</a></li>
+                        <li><a href="nos-programmes.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Nos
+                                programmes</a></li>
+                        <li><a href="realisations.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Réalisations</a>
+                        </li>
+                        <li><a href="dons.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Dons</a>
+                        </li>
+                        <li><a href="actualites-blog.html"
+                                class="text-white/90 hover:text-white hover:translate-x-1 transition-all inline-block text-base font-bold">Actualités
+                                & Blog</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-black mb-4 uppercase tracking-wider">Nous Contacter</h4>
+                    <div class="space-y-3">
+                        <a href="tel:+2290196454393" class="flex items-center group">
+                            <div
+                                class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-white group-hover:text-[#34A7DE] transition-all">
+                                <i class="ph-fill ph-phone text-xl"></i>
+                            </div>
+                            <span class="text-base font-bold">+2290196 45 43 93</span>
+                        </a>
+
+                        <a href="mailto:assogbacletus46@gmail.com" class="flex items-center group">
+                            <div
+                                class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-white group-hover:text-[#34A7DE] transition-all">
+                                <i class="ph-fill ph-envelope text-xl"></i>
+                            </div>
+                            <span class="text-base font-bold break-all">assogbacletus46@gmail.com</span>
+                        </a>
+
+                        <div class="flex items-start group">
+                            <div
+                                class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-white group-hover:text-[#34A7DE] transition-all shrink-0">
+                                <i class="ph-fill ph-map-pin text-xl"></i>
+                            </div>
+                            <span class="text-base font-bold">Cadjehoun 4, Cotonou, Bénin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#0A3D54] py-4">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <p class="text-white/70 font-bold tracking-widest text-xs uppercase">
+                    Copyright @2026ONGGEROD, TOUT DROIT RESERVE
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/scripts/script-index.js"></script>
+
+
+
+
+</body>
+
+</html>
